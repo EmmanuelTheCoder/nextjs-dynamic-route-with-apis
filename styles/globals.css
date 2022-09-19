@@ -17,12 +17,18 @@ a {
 }
 
 .container{
-  border: 1px solid black;
+  border: 3px solid black;
   width: max-content;
   padding: 10px;
   margin: 1rem;
   display: inline-block;
   cursor: pointer;
+}
+
+.container:hover{
+  background: rgb(63, 63, 116);
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 h1{
@@ -45,6 +51,12 @@ h3{
 button{
   color: blue;
   font-size: 1.2rem;
+  display: flex;
+
+}
+button:hover{
+  background: rgb(57, 57, 177);
+  color: #fff;
 }
 .btn-container{
   display: flex;
@@ -58,7 +70,8 @@ button{
   cursor: pointer;
   outline: none;
   border-radius: 12px;
-  border: 3px solid grey
+  border: 3px solid grey;
+  display: block;
 }
 .desc{
   text-align: center;

@@ -48,7 +48,7 @@ export default function details({data}) {
         </div>
         <Link href={'/rest/home'}>
             <button>
-                Home
+                Back
             </button>
         </Link>
     </div>

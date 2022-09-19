@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 import styles from '../styles/Home.module.css'
 
@@ -14,12 +15,18 @@ export default function Home({data}) {
       <h1>Dynamic Routes</h1>
       <p className='desc'>select any of the API types to begin</p>
       <div className='btn-container'>
-        <button className="btn">
-          REST API
-        </button>
-        <button className="btn">
-          Graphql API
-        </button>
+        <Link href={'/rest/home'}>
+          <button className="btn">
+            REST API
+          </button>
+        
+        </Link>
+        <Link href={'/graphql/home'}>
+          <button className="btn">
+            Graphql API
+          </button>
+        
+        </Link>
       </div>
     </div>
   )

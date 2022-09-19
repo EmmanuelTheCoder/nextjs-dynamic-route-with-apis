@@ -82,9 +82,9 @@ export default function detail({data}) {
             <p>email: {email}</p>
             <p>contact: {phone}</p>
         </div>
-        <Link href={'/graphl/home'}>
+        <Link href={'/graphql/home'}>
             <button>
-                Home
+                Back
             </button>
         </Link>
     </div>

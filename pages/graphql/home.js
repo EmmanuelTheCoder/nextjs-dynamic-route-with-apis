@@ -48,6 +48,13 @@ export default function home({data}) {
             </Link>
         ))}
         
+       
+        <Link href={'/'}>
+        <button>
+            Home
+        </button>
+        
+        </Link>
     </div>
   )
 }
