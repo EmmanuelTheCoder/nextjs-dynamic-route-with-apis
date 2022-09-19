@@ -6,10 +6,9 @@ export const query = gql `
 {
     users{
         data{
-          name
           id
           email
-          phone
+          
         }
       }
 }
