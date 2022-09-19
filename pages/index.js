@@ -12,7 +12,7 @@ export default function Home({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Dynamic Routes</h1>
+      <h1>Dynamic Routes in Next.js</h1>
       <p className='desc'>select any of the API types to begin</p>
       <div className='btn-container'>
         <Link href={'/rest/home'}>

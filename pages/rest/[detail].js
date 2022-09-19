@@ -5,13 +5,11 @@ export async function getStaticPaths(){
     const res = await fetch('https://jsonplaceholder.typicode.com/users/')
     const data = await res.json()
 
-    const paths = data.map(user =>{
-        return{
+    const paths = data.map(user =>({
              params: {detail: user.id.toString()},
 
-         }
 
-    })
+    }))
 
 
     return {

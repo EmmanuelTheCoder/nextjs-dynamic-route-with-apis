@@ -71,7 +71,6 @@ export async function getStaticProps({params}){
 export default function detail({data}) {
     const {name, email, id, phone} = data.user
 
-    // console.log(data.user)
   return (
     <div>
 
