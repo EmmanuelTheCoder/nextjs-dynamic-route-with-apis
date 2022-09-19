@@ -1,5 +1,6 @@
 //import {query} from './home'
 import {request, gql} from 'graphql-request'
+import Link from 'next/link'
 
 const queryIdOnly = gql`
 
@@ -15,6 +16,7 @@ const queryIdOnly = gql`
 `
 
 const queryUserById = gql `
+  query ($id: ID!)
   {
     user(id: $id) {
         id
@@ -46,6 +48,7 @@ export async function getStaticPaths(){
 }
 
 export async function getStaticProps({params}){
+
     const variables = {
         id: params.detail
     }
@@ -66,18 +69,18 @@ export async function getStaticProps({params}){
 
 
 export default function detail({data}) {
-    // const {name, email, id, phone} = data
+    const {name, email, id, phone} = data.user
 
-    console.log(data)
+    console.log(data.user)
   return (
     <div>
 
         <div className='detail-container'>
-            {/* <h3>Welcome to GraphQL detail page</h3>
+            <h3>Welcome to GraphQL detail page</h3>
             <p>id: {id}</p>
             <p>name: {name}</p>
             <p>email: {email}</p>
-            <p>contact: {phone}</p> */}
+            <p>contact: {phone}</p>
         </div>
         <Link href={'/graphl/home'}>
             <button>
