@@ -14,7 +14,7 @@ export async function getStaticProps(){
     }
 }
 
-export default function home({data}) {
+export default function Home({data}) {
   return (
     <div>
         <h1>REST API data</h1>

@@ -30,7 +30,7 @@ export async function getStaticProps(){
 
 
 
-export default function home({data}) {
+export default function Home({data}) {
     const userData = data.users.data
   return (
     <div>

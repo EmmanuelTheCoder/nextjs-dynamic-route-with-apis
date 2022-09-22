@@ -15,13 +15,13 @@ export default function Home({data}) {
       <h1>Dynamic Routes in Next.js</h1>
       <p className='desc'>select any of the API types to begin</p>
       <div className='btn-container'>
-        <Link href={'/rest/home'}>
+        <Link href='/rest'>
           <button className="btn">
             REST API
           </button>
         
         </Link>
-        <Link href={'/graphql/home'}>
+        <Link href='/graphql'>
           <button className="btn">
             Graphql API
           </button>

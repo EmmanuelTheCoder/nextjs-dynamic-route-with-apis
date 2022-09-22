@@ -15,19 +15,7 @@ const queryIdOnly = gql`
 
 `
 
-const queryUserById = gql `
-  query ($id: ID!)
-  {
-    user(id: $id) {
-        id
-        email
-        name
-        phone
-        
-      }
-  }
 
-`
 
 export async function getStaticPaths(){
     const data = await request({
@@ -46,6 +34,20 @@ export async function getStaticPaths(){
         fallback: false
     }
 }
+
+const queryUserById = gql `
+  query ($id: ID!)
+  {
+    user(id: $id) {
+        id
+        email
+        name
+        phone
+        
+      }
+  }
+
+`
 
 export async function getStaticProps({params}){
 
@@ -68,7 +70,7 @@ export async function getStaticProps({params}){
 }
 
 
-export default function detail({data}) {
+export default function Detail({data}) {
     const {name, email, id, phone} = data.user
 
   return (
@@ -81,7 +83,7 @@ export default function detail({data}) {
             <p>email: {email}</p>
             <p>contact: {phone}</p>
         </div>
-        <Link href={'/graphql/home'}>
+        <Link href={'/graphql'}>
             <button>
                 Back
             </button>

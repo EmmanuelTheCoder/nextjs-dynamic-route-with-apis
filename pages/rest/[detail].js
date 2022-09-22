@@ -1,6 +1,8 @@
 
 import Link from 'next/link'
 
+
+
 export async function getStaticPaths(){
     const res = await fetch('https://jsonplaceholder.typicode.com/users/')
     const data = await res.json()
@@ -32,7 +34,7 @@ export async function getStaticProps({params}){
     }
 }
 
-export default function details({data}) {
+export default function Details({data}) {
     const {id, name, username, website} = data
   return (
     <div>
@@ -44,7 +46,7 @@ export default function details({data}) {
             <p>username: {username}</p>
             <p>contact website: {website}</p>
         </div>
-        <Link href={'/rest/home'}>
+        <Link href={'/rest'}>
             <button>
                 Back
             </button>
